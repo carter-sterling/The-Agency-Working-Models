@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carter & Sterling | Доказательная бизнес-аналитика и B2B-разведка</title>
+    <!-- Google Fonts: строгое сочетание Inter и элегантного Cormorant Garamond -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text-main: #000000;
+            --text-secondary: #4a4a4a;
+            --border-light: #e5e5e5;
+            --border-dark: #000000;
+            --card-bg: #fbfbfb;
+            --footer-bg: #000000;
+            --footer-text: #ffffff;
+            --footer-muted: #888888;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-serif: 'Cormorant Garamond', Georgia, serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 5rem 1.5rem 4rem 1.5rem;
+        }
+
+        /* HEADER */
+        header {
+            border-bottom: 2px solid var(--border-dark);
+            padding-bottom: 2rem;
+            margin-bottom: 3.5rem;
+        }
+
+        .brand-meta {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            margin-bottom: 0.6rem;
+        }
+
+        h1 {
+            font-size: 2.75rem;
+            font-weight: 700;
+            letter-spacing: -0.04em;
+            line-height: 1.1;
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+        }
+
+        .brand-sub {
+            font-size: 1.15rem;
+            font-weight: 300;
+            color: var(--text-secondary);
+            letter-spacing: -0.01em;
+        }
+
+        /* SECTIONS & TYPOGRAPHY */
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-dark);
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 1.02rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.25rem;
+        }
+
+        p strong {
+            color: var(--text-main);
+        }
+
+        /* HERO SALES HOOK */
+        .hero-lead {
+            font-size: 1.25rem;
+            line-height: 1.5;
+            color: var(--text-main);
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        /* BUTTONS */
+        .cta-group {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: var(--text-main);
+            color: #ffffff;
+            padding: 0.9rem 1.8rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            text-decoration: none;
+            border: 2px solid var(--text-main);
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary:hover {
+            background: #ffffff;
+            color: var(--text-main);
+        }
+
+        .btn-secondary {
+            display: inline-block;
+            background: transparent;
+            color: var(--text-main);
+            padding: 0.9rem 1.8rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            text-decoration: none;
+            border: 2px solid var(--border-dark);
+            transition: all 0.2s ease;
+        }
+
+        .btn-secondary:hover {
+            background: var(--text-main);
+            color: #ffffff;
+        }
+
+        /* MODULE CARDS */
+        .modules-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .module-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border-light);
+            padding: 1.5rem;
+            transition: border-color 0.2s ease;
+        }
+
+        .module-item:hover {
+            border-color: var(--border-dark);
+        }
+
+        .module-num {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            color: var(--text-secondary);
+            margin-bottom: 0.35rem;
+            text-transform: uppercase;
+        }
+
+        .module-item h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+        }
+
+        .module-item p {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+            color: var(--text-secondary);
+        }
+
+        /* COMMERCIAL SLA BOX */
+        .sla-card {
+            border: 2px solid var(--border-dark);
+            padding: 2rem;
+            margin: 2.5rem 0;
+            background: #ffffff;
+        }
+
+        .sla-badge {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            display: inline-block;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--border-dark);
+            padding-bottom: 2px;
+        }
+
+        .sla-pricing {
+            font-size: 2.2rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.03em;
+        }
+
+        .sla-sub {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .sla-points {
+            list-style: none;
+            border-top: 1px solid var(--border-light);
+            padding-top: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .sla-points li {
+            position: relative;
+            padding-left: 1.25rem;
+            margin-bottom: 0.6rem;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        .sla-points li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: var(--text-main);
+            font-weight: bold;
+        }
+
+        /* LUXURY FOOTER */
+        footer.luxury-footer {
+            background: var(--footer-bg);
+            color: var(--footer-text);
+            padding: 5.5rem 1.5rem 3.5rem 1.5rem;
+            border-top: 1px solid var(--border-dark);
+        }
+
+        .footer-wrap {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        /* QUOTE */
+        .footer-quote {
+            text-align: center;
+            padding-bottom: 4rem;
+            margin-bottom: 4rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .quote-glyph {
+            font-family: var(--font-serif);
+            font-size: 3.5rem;
+            line-height: 1;
+            color: #ffffff;
+            margin-bottom: -0.5rem;
+            opacity: 0.7;
+        }
+
+        blockquote {
+            font-family: var(--font-serif);
+            font-size: 1.65rem;
+            font-style: italic;
+            font-weight: 400;
+            line-height: 1.45;
+            color: #ffffff;
+            max-width: 720px;
+            margin: 0 auto 1.25rem auto;
+            letter-spacing: 0.01em;
+        }
+
+        .quote-cite {
+            font-size: 0.8rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--footer-muted);
+        }
+
+        /* 2-COLUMN FOOTER GRID */
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 3.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-col h4 {
+            font-size: 0.82rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            color: #ffffff;
+            margin-bottom: 1.25rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-col p {
+            font-size: 0.9rem;
+            color: var(--footer-muted);
+            line-height: 1.6;
+            margin-bottom: 0.75rem;
+        }
+
+        .meta-row {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1rem;
+        }
+
+        .meta-label {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--footer-muted);
+            margin-bottom: 0.2rem;
+        }
+
+        .meta-value {
+            font-size: 0.92rem;
+            color: #ffffff;
+        }
+
+        .meta-value a {
+            color: #ffffff;
+            text-decoration: none;
+            border-bottom: 1px dotted rgba(255, 255, 255, 0.4);
+            transition: border-color 0.2s ease, opacity 0.2s ease;
+        }
+
+        .meta-value a:hover {
+            opacity: 0.8;
+            border-bottom-color: #ffffff;
+        }
+
+        /* BOTTOM BAR */
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.8rem;
+            color: var(--footer-muted);
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+            blockquote {
+                font-size: 1.35rem;
+            }
+            h1 {
+                font-size: 2.2rem;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="brand-meta">Analytical Agency &bull; Executive Intelligence</div>
+            <h1>Carter & Sterling</h1>
+            <p class="brand-sub">Business Intelligence & Empirical Strategic Intelligence</p>
+        </header>
+
+        <section>
+            <p class="hero-lead">Доказательная бизнес-аналитика и эконометрический аудит для генеральных директоров (CEO), финансовых директоров (CFO) и собственников бизнеса.<!--[cite: 2] --></p>
+            <p>В условиях волатильности классический консалтинг с абстрактными теориями и многочасовыми счетами больше не работает.<!-- --> Carter & Sterling заменяет субъективные предположения точной математической разведкой: мы выявляем структурные уязвимости ваших конкурентов, устраняем утечки капитала и защищаем свободный денежный поток (FCF).<!--[cite: 2, 3] --></p>
+            <p>Вся аналитика строится на «Правиле двух источников» с обязательной верификацией по государственным базам, таможенным реестрам и финансовым терминалам.<!--[cite: 2] --> Для расчетов и формирования документации применяются исключительно профессиональные аналитические инструменты, что исключает ошибки человеческого фактора.<!--[cite: 2, 3] --></p>
+
+            <div class="cta-group">
+                <a href="mailto:bekdaulet.rustemovich@gmail.com?subject=Заказ%20EMSI%20%7C%20Carter%20%26%20Sterling&body=Здравствуйте,%20Бекдаулет.%20Интересует%20проведение%20аудита%20EMSI.%20Наш%20сегмент%20рынка:%20" class="btn-primary">Заказать аудит EMSI</a><!-- -->
+                <a href="mailto:bekdaulet.rustemovich@gmail.com?subject=Запрос%20Onboarding%20Brief&body=Здравствуйте.%20Прошу%20выслать%20Client%20Onboarding%20Brief%20для%20оценки%20проекта." class="btn-secondary">Запросить бриф (10 минут)</a><!--[cite: 1, 5] -->
+            </div>
+        </section>
+
+        <section id="emsi">
+            <h2>Флагманский продукт: EMSI</h2>
+            <p><strong>Enterprise Market & Strategic Intelligence (EMSI)</strong> — институциональный 4-модульный B2B-аудит, дающий исчерпывающий диагноз вашего рынка и операционной модели:<!--[cite: 2, 4] --></p>
+
+            <div class="modules-grid">
+                <div class="module-item">
+                    <div class="module-num">Модуль 01</div>
+                    <h3>Оценка емкости рынка</h3>
+                    <p>Точный расчет видимого потребления ниши на основе таможенных деклараций (ТН ВЭД), государственной статистики и ценовых трендов. Без экспертных домыслов — только доказанные объемы.<!--[cite: 3, 4] --></p>
+                </div>
+                <div class="module-item">
+                    <div class="module-num">Модуль 02</div>
+                    <h3>Конкурентная разведка</h3>
+                    <p>Аудит Топ-5 ключевых конкурентов: расчет индекса монополизации (HHI), анализ их участия и побед в тендерах (Самрук-Казына, Госзакупки) и выявление узких мест в их цепочках поставок.<!--[cite: 3, 4] --></p>
+                </div>
+                <div class="module-item">
+                    <div class="module-num">Модуль 03</div>
+                    <h3>Диагностика себестоимости и рисков</h3>
+                    <p>Моделирование чувствительности вашей юнит-экономики (COGS) к макроэкономическим шокам: изменениям валютного курса USD/KZT, тарифным колебаниям и удорожанию сырья.<!--[cite: 3, 4] --></p>
+                </div>
+                <div class="module-item">
+                    <div class="module-num">Модуль 04</div>
+                    <h3>Управленческий план (Executive Roadmap)</h3>
+                    <p>Пошаговый 90-дневный план первоочередных мер (Quick Wins) для генерального директора и финансового блока с прямым фокусом на сохранение свободного денежного потока (FCF).<!--[cite: 3, 4] --></p>
+                </div>
+            </div>
+
+            <div class="sla-card">
+                <span class="sla-badge">Коммерческий регламент (SLA)</span>
+                <div class="sla-pricing">$100 USD</div>
+                <div class="sla-sub">Фиксированная ставка за полный аудит. Никаких скрытых платежей или оплаты часов.<!--[cite: 2, 3] --></div>
+
+                <ul class="sla-points">
+                    <li><strong>Сроки исполнения:</strong> от 3 до 7 рабочих дней с момента заполнения брифа.<!--[cite: 2, 3] --></li>
+                    <li><strong>Безопасная оплата (50 / 50):</strong> $50 аванс для запуска парсинга данных, $50 — перед итоговой передачей отчета.<!--[cite: 2, 3] --></li>
+                    <li><strong>Полная конфиденциальность:</strong> подписание двустороннего NDA до старта работ.<!--[cite: 2, 3] --></li>
+                    <li><strong>Итоговый формат:</strong> детализированный Executive-отчет в PDF по корпоративному стандарту типографики плюс 15-минутная защита выводов перед первыми лицами.<!--[cite: 2] --></li>
+                </ul>
+
+                <a href="mailto:bekdaulet.rustemovich@gmail.com?subject=Запуск%20EMSI%20(SLA)&body=Здравствуйте,%20Бекдаулет.%20Мы%20готовы%20начать%20с%20подписания%20NDA%20и%20заполнения%20брифа." class="btn-primary">Начать сотрудничество</a><!--[cite: 1, 2, 5] -->
+            </div>
+        </section>
+
+        <section id="committee">
+            <h2>Комитет Аналитики</h2>
+            <p><strong>Analytics Committee (AC)</strong> — образовательно-исследовательская лаборатория при агентстве Carter & Sterling.<!--[cite: 1] --> Это открытое профессиональное сообщество аналитиков, изучающих макроэкономику, структуру отраслей и прикладную науку о данных (Data Science).<!--[cite: 1] --></p>
+            <p>Комитет обеспечивает агентству непрерывную методологическую школу, регулярный обмен практическим опытом (Peer-Review Lab) и кадровый резерв практикующих специалистов для сложных аналитических аудитов.<!--[cite: 1] --></p>
+        </section>
+    </div>
+
+    <!-- ЧЕРНО-БЕЛЫЙ РОСКОШНЫЙ ПОДВАЛ -->
+    <footer class="luxury-footer">
+        <div class="footer-wrap">
+
+            <div class="footer-quote">
+                <div class="quote-glyph">“</div>
+                <blockquote>
+                    Мы не продаем процесс и потраченные часы — мы предоставляем доказательную эконометрическую разведку для защиты свободного денежного потока.<!--[cite: 2] -->
+                </blockquote>
+                <div class="quote-cite">Carter & Sterling Institutional Standard<!--[cite: 2] --></div>
+            </div>
+
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Carter & Sterling Analytical Agency</h4>
+                    <p>Независимое агентство бизнес-разведки и эконометрического аудита. Мы превращаем государственную статистику, таможенные реестры и макроданные в конкретные управленческие решения для первых лиц.<!--[cite: 2, 3] --></p>
+                    <p>Исключение операционных затрат и человеческого фактора благодаря профессиональным инструментам автоматизации и математического анализа.<!--[cite: 2, 3] --></p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Executive Office</h4>
+                    <div class="meta-row">
+                        <span class="meta-label">Founder & CEO</span>
+                        <span class="meta-value">Abzhamiev Bekdaulet<!--[cite: 1, 2] --></span>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">Email</span>
+                        <span class="meta-value">
+                            <a href="mailto:bekdaulet.rustemovich@gmail.com">bekdaulet.rustemovich@gmail.com</a><!--[cite: 1, 2] -->
+                        </span>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">ORCID</span>
+                        <span class="meta-value">
+                            <a href="https://orcid.org/0009-0003-4999-1861" target="_blank" rel="noopener noreferrer">0009-0003-4999-1861</a><!--[cite: 1, 2] -->
+                        </span>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">Professional Profile</span>
+                        <span class="meta-value">
+                            <a href="https://linkedin.com/in/abzhamiev" target="_blank" rel="noopener noreferrer">linkedin.com/in/abzhamiev</a><!--[cite: 1, 2] -->
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>&copy; 2026 Carter & Sterling. Все права защищены.</div>
+                <div>Executive Decision Framework &bull; Evidence-Based Intelligence<!--[cite: 4] --></div>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>
